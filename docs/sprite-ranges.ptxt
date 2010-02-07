@@ -1,0 +1,9 @@
+0   -1000    :signals
+1000-1100    :electrified rail
+1100-1500    :foundations
+1500-1600    :canal graphics
+1600-1625    :one way road
+1625-1800    :tram tracks 
+1800-	     :coast
+:
+:
