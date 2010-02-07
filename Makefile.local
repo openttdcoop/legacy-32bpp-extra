@@ -1,0 +1,23 @@
+# uncomment the lines which you need
+
+# here goes the directory where to copy the compiled grf
+# INSTALLDIR =
+
+# Flags for nforenum and grfcodec
+# NFO_FLAGS      = -w 141
+# GRFCODEC_FLAGS = -e -p 2
+# TAR_FLAGS      = cf
+# ZIP_FLAGS      = -r -j
+# BZIP_FLAGS     = -k9f
+
+# MD5SUM   =
+# GRFCODEC =
+# RENUM    =
+# TAR      =
+# ZIP      =
+# BZIP     =
+# MAKE     =
+# UNIX2DOS =
+GRF_REVISION = 1
+GRF_MODIFIED = 
+REPO_TAGS    = 
