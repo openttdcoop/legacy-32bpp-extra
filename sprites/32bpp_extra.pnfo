@@ -1955,51 +1955,69 @@
   898 sprites/pcx/terrain04.pcx 722 5528 09 31 64 -31 -8
   899 sprites/pcx/terrain04.pcx 2 5592 09 31 64 -31 -8    
 
- 1376 * 6	 07 83 01 \7! 01 \b12
+ 1376 * 6	 07 83 01 \7! 01 \b18
  1377 * 55	 0C "Missing shore tile graphics for "
 	 "the sub-arctic climate"
- 1378 * 3	 05 0D \b10
+ 1378 * 3	 05 0D \b16
   902 sprites/pcx/terrain04.pcx 114 5592 09 15 64 -31 0
+  902 sprites/pcx/terrain04.pcx 114 5592 09 15 64 -31 0 //GT 4063
+  902 sprites/pcx/terrain04.pcx 114 5592 09 15 64 -31 0 //GT 4064
+  902 sprites/pcx/terrain04.pcx 114 5592 09 15 64 -31 0 //GT 4068
+  902 sprites/pcx/terrain04.pcx 114 5592 09 15 64 -31 0 //GT 4062
   907 sprites/pcx/terrain04.pcx 514 5592 09 31 64 -31 -8
+  907 sprites/pcx/terrain04.pcx 514 5592 09 31 64 -31 -8 //GT 4066
   909 sprites/pcx/terrain04.pcx 674 5592 09 23 64 -31 0
+  907 sprites/pcx/terrain04.pcx 514 5592 09 31 64 -31 -8 //GT 4065
+  907 sprites/pcx/terrain04.pcx 514 5592 09 31 64 -31 -8 //GT 4069
   912 sprites/pcx/terrain04.pcx 162 5640 09 47 64 -31 -16
   913 sprites/pcx/terrain04.pcx 242 5640 09 31 64 -31 -8
+  907 sprites/pcx/terrain04.pcx 514 5592 09 31 64 -31 -8 //GT 4067
   915 sprites/pcx/terrain04.pcx 402 5640 09 39 64 -31 -8
   916 sprites/pcx/terrain04.pcx 482 5640 09 31 64 -31 -8
   917 sprites/pcx/terrain04.pcx 562 5640 09 31 64 -31 -8
- 3986 sprites/pcx/empty.pcx 0 0 03 1 1 0 0  // vertical canyon (not used)
- 3991 sprites/pcx/empty.pcx 0 0 03 1 1 0 0  // horizontal canyon (not used)
 
- 1389 * 6	 07 83 01 \7! 02 \b12
+ 1389 * 6	 07 83 01 \7! 02 \b18
  1390 * 57	 0C "Missing shore tile graphics for "
 	 "the sub-tropical climate"
- 1391 * 3	 05 0D \b10
+ 1391 * 3	 05 0D \b16
   920 sprites/pcx/terrain04.pcx 674 5640 09 15 64 -31 0
+  902 sprites/pcx/terrain04.pcx 114 5592 09 15 64 -31 0 //GT 4063
+  902 sprites/pcx/terrain04.pcx 114 5592 09 15 64 -31 0 //GT 4064
+  902 sprites/pcx/terrain04.pcx 114 5592 09 15 64 -31 0 //GT 4068
+  902 sprites/pcx/terrain04.pcx 114 5592 09 15 64 -31 0 //GT 4062
   925 sprites/pcx/terrain04.pcx 322 5704 09 31 64 -31 -8
+  907 sprites/pcx/terrain04.pcx 514 5592 09 31 64 -31 -8 //GT 4066
   927 sprites/pcx/terrain04.pcx 482 5704 09 23 64 -31 0
+  907 sprites/pcx/terrain04.pcx 514 5592 09 31 64 -31 -8 //GT 4065
+  907 sprites/pcx/terrain04.pcx 514 5592 09 31 64 -31 -8 //GT 4069
   930 sprites/pcx/terrain04.pcx 722 5704 09 47 64 -31 -16
   931 sprites/pcx/terrain04.pcx 2 5768 09 31 64 -31 -8
+  907 sprites/pcx/terrain04.pcx 514 5592 09 31 64 -31 -8 //GT 4067
   933 sprites/pcx/terrain04.pcx 162 5768 09 39 64 -31 -8
   934 sprites/pcx/terrain04.pcx 242 5768 09 31 64 -31 -8
   935 sprites/pcx/terrain04.pcx 322 5768 09 31 64 -31 -8
- 3986 sprites/pcx/empty.pcx 0 0 03 1 1 0 0  // vertical canyon (not used)
- 3991 sprites/pcx/empty.pcx 0 0 03 1 1 0 0  // horizontal canyon (not used)
 
  1402 * 6	 07 83 01 \7! 03 \b12
  1403 * 44	 0C "Missing shore tile graphics for "
 	 "the toyland"
  1404 * 3	 05 0D \b10
   938 sprites/pcx/terrain04.pcx 434 5768 09 15 64 -31 0
+  902 sprites/pcx/terrain04.pcx 114 5592 09 15 64 -31 0 //GT 4063
+  902 sprites/pcx/terrain04.pcx 114 5592 09 15 64 -31 0 //GT 4064
+  902 sprites/pcx/terrain04.pcx 114 5592 09 15 64 -31 0 //GT 4068
+  902 sprites/pcx/terrain04.pcx 114 5592 09 15 64 -31 0 //GT 4062
   943 sprites/pcx/terrain04.pcx 82 5832 09 31 64 -31 -8
+  907 sprites/pcx/terrain04.pcx 514 5592 09 31 64 -31 -8 //GT 4066
   945 sprites/pcx/terrain04.pcx 242 5832 09 23 64 -31 0
+  907 sprites/pcx/terrain04.pcx 514 5592 09 31 64 -31 -8 //GT 4065
+  907 sprites/pcx/terrain04.pcx 514 5592 09 31 64 -31 -8 //GT 4069
   948 sprites/pcx/terrain04.pcx 482 5832 09 47 64 -31 -16
   949 sprites/pcx/terrain04.pcx 562 5832 09 31 64 -31 -8
+  907 sprites/pcx/terrain04.pcx 514 5592 09 31 64 -31 -8 //GT 4067
   951 sprites/pcx/terrain04.pcx 722 5832 09 39 64 -31 -8
   952 sprites/pcx/terrain04.pcx 2 5896 09 31 64 -31 -8
   953 sprites/pcx/terrain04.pcx 82 5896 09 31 64 -31 -8
- 3986 sprites/pcx/empty.pcx 0 0 03 1 1 0 0  // vertical canyon (not used)
- 3991 sprites/pcx/empty.pcx 0 0 03 1 1 0 0  // horizontal canyon (not used)
-
+ 
 //Allow the warning concerning shore sprite counts during further processing again.
 //@@WARNING ENABLE 60
 
