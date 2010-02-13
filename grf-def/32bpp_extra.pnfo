@@ -1997,10 +1997,10 @@
   934 grf-def/pcx/terrain04.pcx 242 5768 09 31 64 -31 -8
   935 grf-def/pcx/terrain04.pcx 322 5768 09 31 64 -31 -8
 
- 1402 * 6	 07 83 01 \7! 03 \b12
+ 1402 * 6	 07 83 01 \7! 03 \b18
  1403 * 44	 0C "Missing shore tile graphics for "
 	 "the toyland"
- 1404 * 3	 05 0D \b10
+ 1404 * 3	 05 0D \b16
   938 grf-def/pcx/terrain04.pcx 434 5768 09 15 64 -31 0
   902 grf-def/pcx/terrain04.pcx 114 5592 09 15 64 -31 0 //GT 4063
   902 grf-def/pcx/terrain04.pcx 114 5592 09 15 64 -31 0 //GT 4064

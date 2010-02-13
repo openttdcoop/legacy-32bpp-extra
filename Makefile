@@ -51,8 +51,8 @@ REPO_DIRS    = $(dir $(BUNDLE_FILES))
 -include ${MAKEFILELOCAL}
 
 vpath
-vpath %.pfno $(GRFSPRITEDIR)
-vpath %.nfo $(GRFSPRITEDIR)
+vpath %.pfno $(GRF_DEF_DIR)
+vpath %.nfo $(GRF_DEF_DIR)
 
 .PHONY: clean all bundle bundle_tar bundle_zip bundle_bzip install release release_zip remake test
 
@@ -88,9 +88,9 @@ test_rev:
 	$(_E) "$(shell [ "`cat $(REV_FILENAME)`" = "$(VERSION_STRING)" ] && echo "No change." || (echo "Change detected." && echo "$(VERSION_STRING)" > $(REV_FILENAME)))"
 
 # Compile GRF
-%.$(GRF_SUFFIX) : $(GRFSPRITEDIR)/%.$(NFO_SUFFIX)
+%.$(GRF_SUFFIX) : $(GRF_DEF_DIR)/%.$(NFO_SUFFIX)
 	$(_E) "[Generating] $@"
-	$(_V)$(GRFCODEC) $(GRFCODEC_FLAGS) $@ $(GRFSPRITEDIR)
+	$(_V)$(GRFCODEC) $(GRFCODEC_FLAGS) $@ $(GRF_DEF_DIR)
 	$(_E)
 
 # NFORENUM process copy of the NFO
@@ -105,10 +105,10 @@ test_rev:
 # Clean the source tree
 clean:
 	$(_E) "[Cleaning]"
-	$(_V)-rm -rf *.orig *.pre *.bak *.grf *.new *~ $(GRF_FILENAME)* $(DEP_FILENAMES)  $(GRFSPRITEDIR)/*.bak $(GRFSPRITEDIR)/*.nfo $(DOC_FILENAMES) $(MAKEFILEDEP) $(REV_FILENAME)
+	$(_V)-rm -rf *.orig *.pre *.bak *.grf *.new *~ $(GRF_FILENAME)* $(DEP_FILENAMES)  $(GRF_DEF_DIR)/*.bak $(GRF_DEF_DIR)/*.nfo $(DOC_FILENAMES) $(MAKEFILEDEP) $(REV_FILENAME)
 
 mrproper: clean
-	$(_V)-rm -rf $(DIR_BASE)* $(GRFSPRITEDIR)/$(GRF_FILENAME) $(OBG_FILE) $(DIR_NAME_SRC)
+	$(_V)-rm -rf $(DIR_BASE)* $(GRF_DEF_DIR)/$(GRF_FILENAME) $(DIR_NAME_SRC)
 
 $(DIR_NAME) : all $(DOC_FILENAMES)
 	$(_E) "[BUNDLE]"
@@ -152,7 +152,7 @@ install: $(TAR_FILENAME) $(INSTALLDIR)
 bundle_src:
 	$(_V) rm -rf $(DIR_NAME_SRC)
 	$(_V) mkdir -p $(DIR_NAME_SRC)
-	$(_V) cp -R $(GRFSPRITEDIR) $(DOCDIR) Makefile Makefile.config $(DIR_NAME_SRC)
+	$(_V) cp -R $(GRF_DEF_DIR) $(DOCDIR) Makefile Makefile.config $(DIR_NAME_SRC)
 	$(_V) cp Makefile.local.sample $(DIR_NAME_SRC)/Makefile.local
 	$(_V) echo 'GRF_REVISION = $(GRF_REVISION)' >> $(DIR_NAME_SRC)/Makefile.local
 	$(_V) echo 'GRF_MODIFIED = $(GRF_MODIFIED)' >> $(DIR_NAME_SRC)/Makefile.local
