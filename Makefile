@@ -59,7 +59,7 @@ vpath %.nfo $(GRFSPRITEDIR)
 # Now, the fun stuff:
 
 # Target for all:
-# all : $(OBG_FILE)
+
 all : test_rev $(GRF_FILENAME).$(GRF_SUFFIX)
 
 -include ${MAKEFILEDEP}
