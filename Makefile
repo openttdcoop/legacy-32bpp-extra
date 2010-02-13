@@ -51,7 +51,7 @@ REPO_DIRS    = $(dir $(BUNDLE_FILES))
 -include ${MAKEFILELOCAL}
 
 vpath
-vpath %.pfno $(GRF_DEF_DIR)
+vpath %.pnfo $(GRF_DEF_DIR)
 vpath %.nfo $(GRF_DEF_DIR)
 
 .PHONY: clean all bundle bundle_tar bundle_zip bundle_bzip install release release_zip remake test
@@ -115,7 +115,10 @@ $(DIR_NAME) : all $(DOC_FILENAMES)
 	$(_E) "[Generating:] $@/."
 	$(_V)if [ -e $@ ]; then rm -rf $@; fi
 	$(_V)mkdir $@
+	$(_V)mkdir $@/$(SPRITES_DIR)
+	$(_V)mkdir $@/$(SPRITES_DIR)/$(GRF_NAME)
 	$(_V)-for i in $(BUNDLE_FILES); do cp $$i $@; done
+	$(_V)-for png in $(shell find $(SPRITES_DIR) -name "*.png"); do cp $$png $@/$(SPRITES_DIR)/$(GRF_NAME);done
 	$(_V) if [ `type -p $(UNIX2DOS)` ]; then $(UNIX2DOS) $(addprefix $@/,$(notdir $(DOC_FILENAMES))) &> /dev/null && echo " - Converting to DOS line endings"; else echo " - Cannot convert to DOS line endings!"; fi
 
 bundle: $(DIR_NAME)
@@ -130,12 +133,12 @@ bundle: $(DIR_NAME)
 %.$(TAR_SUFFIX): $(DIR_NAME)
 # Create the release bundle with all files in one tar
 	$(_E) "[Generating:] $@"
-	$(_V)$(TAR) $(TAR_FLAGS) $@ $(basename $@)
+	$(_V)$(TAR) $(TAR_FLAGS) -C $(DIR_NAME) -f $@ $(GRF_FILENAME).$(GRF_SUFFIX) $(SPRITES_DIR)
 	$(_E)
 
 bundle_tar: $(TAR_FILENAME)
 bundle_zip: $(ZIP_FILENAME)
-$(ZIP_FILENAME): $(DIR_NAME)
+$(ZIP_FILENAME): $(TAR_FILENAME)
 	$(_E) "[Generating:] $@"
 	$(_V)$(ZIP) $(ZIP_FLAGS) $@ $^
 bundle_bzip: $(BZIP_FILENAME)
