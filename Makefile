@@ -124,7 +124,6 @@ bundle: $(DIR_NAME)
 	$(_E) "[Generating] $@"
 	$(_V) cat $< \
 		| sed -e "s/$(GRF_TITLE_DUMMY)/$(GRF_TITLE)/" \
-		| sed -e "s/$(OBG_FILE_DUMMY)/$(OBG_FILE)/" \
 		| sed -e "s/$(REVISION_DUMMY)/$(GRF_REVISION)/" \
 		> $@
 
