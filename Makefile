@@ -105,7 +105,7 @@ test_rev:
 # Clean the source tree
 clean:
 	$(_E) "[Cleaning]"
-	$(_V)-rm -rf *.orig *.pre *.bak *.grf *.new *~ $(GRF_FILENAME)* $(DEP_FILENAMES) $(GRFSPRITEDIR)/$(GRF_FILENAME).* $(GRFSPRITEDIR)/*.bak $(GRFSPRITEDIR)/*.nfo $(DOC_FILENAMES) $(MAKEFILEDEP) $(REV_FILENAME)
+	$(_V)-rm -rf *.orig *.pre *.bak *.grf *.new *~ $(GRF_FILENAME)* $(DEP_FILENAMES)  $(GRFSPRITEDIR)/*.bak $(GRFSPRITEDIR)/*.nfo $(DOC_FILENAMES) $(MAKEFILEDEP) $(REV_FILENAME)
 
 mrproper: clean
 	$(_V)-rm -rf $(DIR_BASE)* $(GRFSPRITEDIR)/$(GRF_FILENAME) $(OBG_FILE) $(DIR_NAME_SRC)
