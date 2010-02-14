@@ -137,8 +137,8 @@ bundle: $(DIR_NAME)
 	$(_E)
 
 bundle_tar: $(TAR_FILENAME)
-bundle_zip: $(ZIP_FILENAME)
-$(ZIP_FILENAME): $(TAR_FILENAME)
+bundle_zip: $(ZIP_FILENAME) 
+$(ZIP_FILENAME): $(TAR_FILENAME) $(DOC_FILENAMES)
 	$(_E) "[Generating:] $@"
 	$(_V)$(ZIP) $(ZIP_FLAGS) $@ $^
 bundle_bzip: $(BZIP_FILENAME)
