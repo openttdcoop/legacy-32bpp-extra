@@ -55,7 +55,7 @@ vpath
 vpath %.pnfo $(GRF_DEF_DIR)
 vpath %.nfo $(GRF_DEF_DIR)
 
-.PHONY: clean all bundle bundle_tar bundle_zip bundle_bzip install release release_zip remake test
+.PHONY: clean all bundle bundle_tar bundle_zip bundle_bzip install remake test test_rev
 
 
 
@@ -81,11 +81,9 @@ test :
 	$(_E) "Path to Unix2Dos:             $(UNIX2DOS)"
 	$(_E) "===="
 	
-$(REV_FILENAME):
-	echo "$(GRF_REVISION)" > $(REV_FILENAME)
-test_rev:
+test_rev: 
 	$(_E) "[Version check]"
-	$(_E) "$(shell [ "`cat $(REV_FILENAME)`" = "$(VERSION_STRING)" ] && echo "No change." || (echo "Change detected." && echo "$(VERSION_STRING)" > $(REV_FILENAME)))"
+	$(_E) "$(shell [ -f "$(REV_FILENAME)" ] && [ "`cat $(REV_FILENAME)`" = "$(VERSION_STRING)" ] && echo "No change." || (echo "Change detected." && echo "$(VERSION_STRING)" > $(REV_FILENAME)))"
 
 # Compile GRF
 %.$(GRF_SUFFIX) : %.$(NFO_SUFFIX)

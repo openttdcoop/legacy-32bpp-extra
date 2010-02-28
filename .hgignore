@@ -36,3 +36,6 @@ grf-def/.renum
 # Files created by Mac image preview and file browser:
 .DS_Store
 Thumbs.db
+
+# Files created by Dolphin on KDE:
+.directory
