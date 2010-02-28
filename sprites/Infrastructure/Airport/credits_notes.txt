@@ -1,0 +1,5 @@
+Graphics: Maquinista, LordAzamath, Ben_Robbins_(derived)
+Pngcodec: Maquinista
+Source  : http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=36 (v2)
+
+ 
