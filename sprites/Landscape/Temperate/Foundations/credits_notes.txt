@@ -1,0 +1,5 @@
+Graphics:GT1750
+Pngcodec:GT1750
+Source: http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=42 (v2)
+
+

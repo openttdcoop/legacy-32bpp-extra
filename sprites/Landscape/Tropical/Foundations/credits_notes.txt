@@ -1,0 +1,5 @@
+Graphics:Maquinista
+Pngcodec:Maquinista (using a box model by J0rdax)
+Source: http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=42 (v2)
+
+
