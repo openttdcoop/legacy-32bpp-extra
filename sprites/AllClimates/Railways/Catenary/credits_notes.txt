@@ -1,0 +1,10 @@
+Graphics:ArmEagle
+Pngcodec:ArmEagle
+Source: http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=58
+
+Author's license notice:
+http://www.tt-forums.net/viewtopic.php?p=848315#p848315
+And included in the original tar:
+Anyone may do anything with it he or she wants, credits are welcome but not required.
+(I expect these graphics to be redone eventually anyway, especially the pylons.)
+

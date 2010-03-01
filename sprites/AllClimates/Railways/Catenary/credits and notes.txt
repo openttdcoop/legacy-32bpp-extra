@@ -1,8 +1,0 @@
-All sprites drawn and coded by ArmEagle
-
-Anyone may do anything with it he or she wants, credits are welcome but not required.
-(I expect these graphics to be redone eventually anyway, especially the pylons.)
-
-Note that there seems to be an oversight in the rendering order of these graphics, where
- the catenary graphics cover some pylons, for example sprite 1275. Maybe this should be
- reported as a bug, but I never did officially.
