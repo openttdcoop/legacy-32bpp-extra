@@ -17,7 +17,7 @@ MAKEFILE_DEP=Makefile.dep
 include ${MAKEFILE_CONFIG}
 export
 # this overrides definitions from above:
-#-include ${MAKEFILELOCAL}
+-include ${MAKEFILELOCAL}
 
 # include the universal Makefile definitions for NewGRF Projects
 include ${MAKEFILE_DEF}
