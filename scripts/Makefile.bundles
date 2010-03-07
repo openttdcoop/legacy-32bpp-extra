@@ -1,22 +1,33 @@
-$(DIR_NAME): all $(BUNDLE_FILES)
-	$(_E) "[BUNDLE]"
-	$(_E) "[Generating] $@."
-	$(_V) if [ -e $@ ]; then rm -rf $@; fi
-	$(_V) mkdir $@
-	$(_V) -for i in $(BUNDLE_FILES); do cp $$i $@; done	
+
+$(DIR_NAME) : $(BUNDLE_FILES)
+	$(_E) "[BUNDLE] $(BUNDLE_FILES)"
+	$(_E) "[Generating:] $@/."
+	$(_V)if [ -e $@ ]; then rm -rf $@; fi
+	$(_E) "[mkdir:] $@"	
+	$(_V)mkdir $@
+	$(_E) "[mkdir:] $@/$(SPRITES_DIR)"
+	$(_V)mkdir $@/$(SPRITES_DIR)
+	$(_E) "[mkdir:] $@/$(SPRITES_DIR)/$(basename $(MAIN_TARGET))"	
+	$(_V)mkdir $@/$(SPRITES_DIR)/$(basename $(MAIN_TARGET))
+	$(_V)-for i in $(BUNDLE_FILES); do cp $$i $@; done
+	$(_V)-for png in $(shell find $(SPRITES_DIR) -name "*.png"); do cp $$png $@/$(SPRITES_DIR)/$(basename $(MAIN_TARGET));done
+
+bundle: $(DIR_NAME)
 
 %.tar: $(DIR_NAME)
 # Create the release bundle with all files in one tar
 	$(_E) "[Generating:] $@"
-	$(_V)$(TAR) $(TAR_FLAGS) $@ $(basename $@)
+	$(_V)$(TAR) $(TAR_FLAGS) $@ -C $(DIR_NAME)  $(MAIN_TARGET) $(SPRITES_DIR)
 	$(_E)
 
-bundle: $(DIR_NAME)
 bundle_tar: $(TAR_FILENAME)
+
 bundle_zip: $(ZIP_FILENAME)
-$(ZIP_FILENAME): $(DIR_NAME)
+$(ZIP_FILENAME): $(TAR_FILENAME) $(DOC_FILES)
 	$(_E) "[Generating:] $@"
-	$(_V) $(ZIP) $(ZIP_FLAGS) $@ $^
+	$(_E) "$(ZIP) $(ZIP_FLAGS) $@ $(TAR_FILENAME)"
+	$(_V) $(ZIP) $(ZIP_FLAGS) $@ $(TAR_FILENAME) $(DOC_FILES)
+
 bundle_bzip: $(BZIP_FILENAME)
 $(BZIP_FILENAME): $(TAR_FILENAME)
 	$(_E) "[Generating:] $@"
@@ -31,7 +42,9 @@ install: $(TAR_FILENAME) $(INSTALL_DIR)
 bundle_src:
 	$(_E) "[Generating] $(DIR_NAME_SRC)"
 	$(_V) rm -rf $(DIR_NAME_SRC)
+	$(_E) mkdir -p $(DIR_NAME_SRC)	
 	$(_V) mkdir -p $(DIR_NAME_SRC)
+	$(_E) mkdir -p $(DIR_NAME_SRC)	$(addprefix $(DIR_NAME_SRC)/,$(shell for i in $(REPO_DIRS); do for j in $(MAIN_DIRS); do echo $$i | grep $$j; done; done))	
 	$(_V) mkdir -p $(addprefix $(DIR_NAME_SRC)/,$(shell for i in $(REPO_DIRS); do for j in $(MAIN_DIRS); do echo $$i | grep $$j; done; done))
 	$(_V) for k in `for i in $(REPO_FILES); do for j in $(MAIN_DIRS); do echo "$$i" | grep "$$j"; done; done;`; do cp -rf $$k $(addprefix $(DIR_NAME_SRC)/,$$k); done
 	$(_V) for k in `for i in $(REPO_FILES); do echo "$$i" | grep -v "/"; done;`; do cp -rf $$k $(DIR_NAME_SRC); done

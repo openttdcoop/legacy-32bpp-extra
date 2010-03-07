@@ -7,7 +7,7 @@
     9 * 12	 0B 03 7F 01 "Windows" 00
 
 // In TTDP there's no other ingame place to see the version than here:
-   10 * 230	 08 07 "OGX" 01 "OpenGFX 32bpp Extra NewGRF" VERSION 00
+   10 * 230	 08 07 {{GRF_ID}} "{{GRF_TITLE}}" 00
 	 "For information and credits, please refer to the readme.txt which came with this package." 00
 
 
