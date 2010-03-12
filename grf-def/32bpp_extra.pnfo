@@ -1718,7 +1718,11 @@
    11 * 6	 0C "spare"
    11 * 6	 0C "spare"
    11 * 6	 0C "spare"
-
+   11 * 6	 0C "spare"
+   11 * 6	 0C "spare"
+   11 * 6	 0C "spare"
+   11 * 6	 0C "spare"
+   
  1240 * 22	 0C "One way road graphics"
  1241 * 3	 05 09 06
  1242 grf-def/pcx/openttdw-r14502.pcx 226 3512 01 16 24 -12 -8
@@ -1728,10 +1732,6 @@
  1246 grf-def/pcx/openttdw-r14502.pcx 354 3512 01 16 24 -10 -8
  1247 grf-def/pcx/openttdw-r14502.pcx 386 3512 01 16 28 -12 -8
 
-   11 * 6	 0C "spare"
-   11 * 6	 0C "spare"
-   11 * 6	 0C "spare"
-   11 * 6	 0C "spare"
    11 * 6	 0C "spare"
    11 * 6	 0C "spare"
    11 * 6	 0C "spare"
