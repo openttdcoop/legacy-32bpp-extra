@@ -2002,18 +2002,18 @@
 	 "the toyland"
  1404 * 3	 05 0D \b16
   938 grf-def/pcx/terrain04.pcx 434 5768 09 15 64 -31 0
-  902 grf-def/pcx/terrain04.pcx 114 5592 09 15 64 -31 0 //GT 4063
-  902 grf-def/pcx/terrain04.pcx 114 5592 09 15 64 -31 0 //GT 4064
-  902 grf-def/pcx/terrain04.pcx 114 5592 09 15 64 -31 0 //GT 4068
-  902 grf-def/pcx/terrain04.pcx 114 5592 09 15 64 -31 0 //GT 4062
+  939 grf-def/pcx/terrain04.pcx 514 5768 09 31 64 -31 0 //GT 4063
+  940 grf-def/pcx/terrain04.pcx 594 5768 09 23 64 -31 0 //GT 4064
+  941 grf-def/pcx/terrain04.pcx 674 5768 09 23 64 -31 0 //GT 4068
+  902 grf-def/pcx/terrain04.pcx 2 5832 09 31 64 -31 0 //GT 4062
   943 grf-def/pcx/terrain04.pcx 82 5832 09 31 64 -31 -8
-  907 grf-def/pcx/terrain04.pcx 514 5592 09 31 64 -31 -8 //GT 4066
+  907 grf-def/pcx/terrain04.pcx 162 5832 09 23 64 -31 0 //GT 4066
   945 grf-def/pcx/terrain04.pcx 242 5832 09 23 64 -31 0
-  907 grf-def/pcx/terrain04.pcx 514 5592 09 31 64 -31 -8 //GT 4065
-  907 grf-def/pcx/terrain04.pcx 514 5592 09 31 64 -31 -8 //GT 4069
+  907 grf-def/pcx/terrain04.pcx 322 5832 09 39 64 -31 -8 //GT 4065
+  907 grf-def/pcx/terrain04.pcx 402 5832 09 39 64 -31 -8 //GT 4069
   948 grf-def/pcx/terrain04.pcx 482 5832 09 47 64 -31 -16
   949 grf-def/pcx/terrain04.pcx 562 5832 09 31 64 -31 -8
-  907 grf-def/pcx/terrain04.pcx 514 5592 09 31 64 -31 -8 //GT 4067
+  907 grf-def/pcx/terrain04.pcx 642 5832 09 39 64 -31 -8 //GT 4067
   951 grf-def/pcx/terrain04.pcx 722 5832 09 39 64 -31 -8
   952 grf-def/pcx/terrain04.pcx 2 5896 09 31 64 -31 -8
   953 grf-def/pcx/terrain04.pcx 82 5896 09 31 64 -31 -8
