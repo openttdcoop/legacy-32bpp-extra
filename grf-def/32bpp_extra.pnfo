@@ -10,6 +10,19 @@
    10 * 230	 08 07 {{GRF_ID}} "{{GRF_TITLE}}" 00
 	 "For information and credits, please refer to the readme.txt which came with this package." 00
 
+   11 * 6	 0C "spare"
+   11 * 6	 0C "spare"
+   11 * 6	 0C "spare"
+   11 * 6	 0C "spare"
+   11 * 6	 0C "spare"
+   11 * 6	 0C "spare"
+   11 * 6	 0C "spare"
+   11 * 6	 0C "spare"
+   11 * 6	 0C "spare"
+   11 * 6	 0C "spare"
+   11 * 6	 0C "spare"
+   11 * 6	 0C "spare"
+   11 * 6	 0C "spare"
 
 
   269 * 58	 0C "Pre-signal, semaphore, and PBS graphics (British Style)"
@@ -1084,19 +1097,6 @@
   752 grf-def/pcx/semaphores.pcx 674 536 01 21 12 -9 -19
   753 grf-def/pcx/semaphores.pcx 706 536 01 24 9 -6 -22
 
-   11 * 6	 0C "spare"
-   11 * 6	 0C "spare"
-   11 * 6	 0C "spare"
-   11 * 6	 0C "spare"
-   11 * 6	 0C "spare"
-   11 * 6	 0C "spare"
-   11 * 6	 0C "spare"
-   11 * 6	 0C "spare"
-   11 * 6	 0C "spare"
-   11 * 6	 0C "spare"
-   11 * 6	 0C "spare"
-   11 * 6	 0C "spare"
-   11 * 6	 0C "spare"
    11 * 6	 0C "spare"
    11 * 6	 0C "spare"
    11 * 6	 0C "spare"
