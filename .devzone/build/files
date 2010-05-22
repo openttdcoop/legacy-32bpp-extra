@@ -1,0 +1,7 @@
+R;%{BUILD}/*.zip
+%{BUILD}/*.tar.gz
+%{BUILD}/*.md5
+%{BUILD}/*build.log
+E;%{BUILD}/*build.err.log
+%{BUILD}/grf-def/*.nfo
+%{BUILD}/docs/readme.txt
