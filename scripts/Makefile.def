@@ -29,7 +29,7 @@ HG             ?= hg
 MAKE           ?= make
 UNIX2DOS       ?= $(shell [ `which unix2dos 2>/dev/null` ] && echo "unix2dos" || echo "")
 # Macs have a different md5 command than linux or mingw envirnoment:
-MD5SUM         ?= $(shell [ "$(OSTYPE)" == "Darwin" ] && echo "md5 -r" || echo "md5sum")
+MD5SUM         ?= $(shell [ "$(OSTYPE)" = "Darwin" ] && echo "md5 -r" || echo "md5sum")
 
 SCRIPT_DIR     ?= scripts
 SRC_DIR        ?= sprites
@@ -60,7 +60,7 @@ endif
 # a release build (taged version): GRF's Name 0.1
 ################################################################
 REPO_REVISION ?= $(shell $(HG) id -n | cut -d+ -f1)
-REPO_MODIFIED ?= $(shell [ "`$(HG) id | cut -c13`" == "+" ] && echo "M" || echo "")
+REPO_MODIFIED ?= $(shell [ "`$(HG) id | cut -c13`" = "+" ] && echo "M" || echo "")
 REPO_TAGS     ?= $(shell $(HG) id -t | grep -v "tip")
 REPO_FILES_CMD := $(HG) st -A | grep -v  "^I" | grep -v "^?" | grep -v "^\!" | cut -d\  -f2
 REPO_FILES    := $(shell $(REPO_FILES_CMD))
