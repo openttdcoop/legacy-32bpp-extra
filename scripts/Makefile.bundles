@@ -39,6 +39,19 @@ install: $(TAR_FILENAME) $(INSTALL_DIR)
 	$(_V)-cp $(TAR_FILENAME) $(INSTALL_DIR)
 	$(_E)
 
+md5: $(MD5_FILENAME)
+
+# OSX md5 programm generates slightly different output. Aleviate that by throwing some sed on all output:
+$(MD5_FILENAME): $(TARGET_FILES)
+	$(_E) "[MD5] $@"
+	$(_V) $(MD5SUM) $(TARGET_FILES) | sed "s/  / /;s/ /  /" > $(MD5_FILENAME)
+
+# OSX md5 programm generates slightly different output. Aleviate that by throwing some sed on all output:
+check: $(TARGET_FILES) $(GRF_FILENAMES)
+	$(_V) if [ -f $(MD5_FILENAME) ]; then echo "[CHECKING md5sums]"; else echo "Required file '$(MD5_FILENAME)' which to test against not found!"; false; fi
+	$(_V) $(MD5SUM) $(TARGET_FILES) | sed "s/  / /;s/ /  /" > md5.check
+	$(_V) if [ -z "`diff md5.check $(MD5_FILENAME)`" ]; then echo "No differences in md5sums"; else echo "Differences in md5sums:"; echo "`diff md5.check $(MD5_FILENAME)`"; false; fi
+
 bundle_src:
 	$(_E) "[Generating] $(DIR_NAME_SRC)"
 	$(_V) rm -rf $(DIR_NAME_SRC)
